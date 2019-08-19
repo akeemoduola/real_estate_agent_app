@@ -1,0 +1,2 @@
+json.extract! agent, :id, :zillow_url, :first_name, :last_name, :zillow_rating, :brokerage_name, :review, :title, :address, :city, :state, :zip_code, :phone_no, :website, :facebook, :instagram, :linkedin, :twitter, :snapchat, :youtube, :hide, :number_of_sales_presented_buyer, :seller_to_buyer_ratio, :date_processed, :request_number, :number_of_views, :admin_views, :visitor_views, :created_at, :updated_at
+json.url agent_url(agent, format: :json)

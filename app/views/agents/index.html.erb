@@ -1,0 +1,79 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Agents</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Zillow url</th>
+      <th>First name</th>
+      <th>Last name</th>
+      <th>Zillow rating</th>
+      <th>Brokerage name</th>
+      <th>Review</th>
+      <th>Title</th>
+      <th>Address</th>
+      <th>City</th>
+      <th>State</th>
+      <th>Zip code</th>
+      <th>Phone no</th>
+      <th>Website</th>
+      <th>Facebook</th>
+      <th>Instagram</th>
+      <th>Linkedin</th>
+      <th>Twitter</th>
+      <th>Snapchat</th>
+      <th>Youtube</th>
+      <th>Hide</th>
+      <th>Number of sales presented buyer</th>
+      <th>Seller to buyer ratio</th>
+      <th>Date processed</th>
+      <th>Request number</th>
+      <th>Number of views</th>
+      <th>Admin views</th>
+      <th>Visitor views</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @agents.each do |agent| %>
+      <tr>
+        <td><%= agent.zillow_url %></td>
+        <td><%= agent.first_name %></td>
+        <td><%= agent.last_name %></td>
+        <td><%= agent.zillow_rating %></td>
+        <td><%= agent.brokerage_name %></td>
+        <td><%= agent.review %></td>
+        <td><%= agent.title %></td>
+        <td><%= agent.address %></td>
+        <td><%= agent.city %></td>
+        <td><%= agent.state %></td>
+        <td><%= agent.zip_code %></td>
+        <td><%= agent.phone_no %></td>
+        <td><%= agent.website %></td>
+        <td><%= agent.facebook %></td>
+        <td><%= agent.instagram %></td>
+        <td><%= agent.linkedin %></td>
+        <td><%= agent.twitter %></td>
+        <td><%= agent.snapchat %></td>
+        <td><%= agent.youtube %></td>
+        <td><%= agent.hide %></td>
+        <td><%= agent.number_of_sales_presented_buyer %></td>
+        <td><%= agent.seller_to_buyer_ratio %></td>
+        <td><%= agent.date_processed %></td>
+        <td><%= agent.request_number %></td>
+        <td><%= agent.number_of_views %></td>
+        <td><%= agent.admin_views %></td>
+        <td><%= agent.visitor_views %></td>
+        <td><%= link_to 'Show', agent %></td>
+        <td><%= link_to 'Edit', edit_agent_path(agent) %></td>
+        <td><%= link_to 'Destroy', agent, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Agent', new_agent_path %>
